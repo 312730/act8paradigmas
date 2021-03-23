@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>nombre:</p>
+    <input type="text" id = "name"></input>
+    <p>sexo:</p>
+    <select id = "sex">
+        <option value = "1">mujer</option>
+        <option value = "2">hombre</option>
+    </select>
+    <button onclick = "secks()">greet</button>
+    <p id = "msg"></p>
+
+
+    <script>
+        const secks = () =>{
+            let seckso = document.getElementById("sex").value;
+            let nam = document.getElementById("name").value;
+            let mess = "";
+            if (seckso == "1"){
+                mess = `bienvenida ${nam}`
+            } else{
+                mess = `bienvenido ${nam}`
+            }
+            document.getElementById("msg").innerHTML = mess;
+        }
+    </script>
+</body>
+</html>
